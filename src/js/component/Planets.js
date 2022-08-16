@@ -16,9 +16,15 @@ function Planets() {
                                 Climate : {planeta.climate} <br />
                                 Gravity : {planeta.gravity}
                             </p>
-                            <a href="#" className="btn btn-outline-primary">
-                                Learn More!
-                            </a>
+                            <div className='d-flex justify-content-between'>
+                                <a href="#" className="btn btn-outline-primary">
+                                    Learn More!
+                                </a>
+                                <button type='button' onClick={() => actions.addToFavorite(planeta.name)} className='btn btn-outline-warning'>
+                                    <i className="fa-regular fa-heart"></i>
+                                </button>
+
+                            </div>
                         </div>
                     </div>
                 )

@@ -16,6 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			people : null,
 			vehicles : null,
 			planets : null,
+			favorites: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -104,7 +105,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("Error en la petición!");
 						console.log(error);
 					})
-			}
+			},
+			addToFavorite : (current) => {
+				console.log(current)
+			},
 		}
 	};
 };

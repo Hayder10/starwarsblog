@@ -16,9 +16,15 @@ function Vehicles() {
                                 Manufacturer : {vehiculo.manufacturer} <br />
                                 Crew : {vehiculo.crew}
                             </p>
-                            <a href="#" className="btn btn-outline-primary">
-                                Learn More!
-                            </a>
+                            <div className='d-flex justify-content-between'>
+                                <a href="#" className="btn btn-outline-primary">
+                                    Learn More!
+                                </a>
+                                <button type='button' onClick={() => actions.addToFavorite(vehiculo.name)} className='btn btn-outline-warning'>
+                                    <i className="fa-regular fa-heart"></i>
+                                </button>
+
+                            </div>
                         </div>
                     </div>
             )
