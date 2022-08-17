@@ -8,7 +8,7 @@ function Vehicles() {
             {!!store.vehicles && store.vehicles.map((vehiculo, i) => {
                 return (
                     <>
-                        <div className="container">
+                        <div className="container mt-4">
                             <div className="row row-cols-3 row-cols-md-4 g-2">
                                 {!!store.people && store.vehicles.map((vehicle, i) => {
                                     return (

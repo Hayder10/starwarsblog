@@ -6,7 +6,7 @@ function Navbar2() {
   const { store, actions } = useContext(Context);
   return (
     <nav className="navbar navbar-expand-lg bg-light">
-      <div className="container-fluid">
+      <div className="container">
         <Link className="navbar-brand" to="/">
           <img src='https://upload.wikimedia.org/wikipedia/commons/c/ce/Star_wars2.svg' width="100" height="50" ></img>
         </Link>
@@ -34,7 +34,7 @@ function Navbar2() {
               Favorites {store.favorites.length>0 ? `(${store.favorites.length})`: null}
             </button>
             <ul className="dropdown-menu dropdown-menu-end">
-              {store.favorites.map((favorito, i) => {
+              {store.favorites.length > 0 ? store.favorites.map((favorito, i) => {
                 return (
                   <>
                     <div className='d-flex'>
@@ -45,7 +45,7 @@ function Navbar2() {
 
 
                 )
-              })}
+              }) : <div className='d-fle'><li className='py-2 px-4 text-secondary'>No favorites yet!</li></div>}
             </ul>
           </div>
         </div>

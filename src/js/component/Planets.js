@@ -5,7 +5,7 @@ function Planets() {
     const {store,actions} = useContext(Context)
     return (
         <>
-            <div className="container">
+            <div className="container mt-4">
                 <div className="row row-cols-3 row-cols-md-4 g-2">
                     {!!store.people && store.planets.map((planeta, i) => {
                         return (
