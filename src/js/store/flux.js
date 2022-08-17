@@ -107,7 +107,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 			},
 			addToFavorite : (current) => {
-				console.log(current)
+				const store = getStore();
+				const favoritesArray = store.favorites
+				//Add to favorite
+				if (favoritesArray.includes(current)){
+					favoritesArray.splice(favoritesArray.indexOf(current),1)
+				}else{
+					favoritesArray.push(current)
+				}
+				setStore({favorites: favoritesArray})
+				console.log(store.favorites)
 			},
 		}
 	};
